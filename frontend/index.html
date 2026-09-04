@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="app-header">
         <div class="logo">SignalLens</div>
@@ -17,23 +19,34 @@
     </header>
 
     <main class="container">
+
+        <section class="health-section" style="margin-top:20px;">
+            <div id="watchlist-health" class="watchlist-health">
+                <!-- Health injected here -->
+            </div>
+        </section>
+
         <section class="attention-section">
             <div class="section-header">
-                <h2>Your Attention</h2>
-                <button id="review-all-btn" class="btn btn-secondary">Mark All Reviewed</button>
+                <h2>While You Were Away</h2>
+                <div>
+                    <button id="filter-attention-btn" class="btn btn-secondary">Filter: All Meaningful</button>
+                    <button id="review-all-btn" class="btn btn-secondary" style="margin-left:5px;">Mark All
+                        Reviewed</button>
+                </div>
             </div>
-            
+
             <div id="attention-queue" class="attention-grid">
                 <!-- Cards injected here -->
             </div>
         </section>
 
-        <section class="watchlist-section">
+        <section class="watchlist-section" style="margin-top: 50px;">
             <div class="section-header">
                 <h2>Watchlist</h2>
                 <button id="add-stock-btn" class="btn btn-primary">+ Add Stock</button>
             </div>
-            
+
             <div class="table-container">
                 <table id="watchlist-table">
                     <thead>
@@ -81,6 +94,10 @@
         </div>
     </div>
 
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
     <script src="/js/app.js"></script>
 </body>
+
 </html>

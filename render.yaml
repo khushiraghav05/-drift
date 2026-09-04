@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: signallens-api
+    plan: free
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: MARKET_PROVIDER
+        value: demo
+      - key: PORT
+        value: 8000
